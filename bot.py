@@ -36,11 +36,8 @@ class MyClient(discord.Client):
 
             for i in range(len(dic_a)):
                 if dic_a[i] != dic_b[i] and int(dic_a[i]["sold_tiles"]) < 2000:
-                    print("found something")
                     channel = client.get_channel(channel-id)
                     await channel.send(f"<@&796062627926245397> Es wurden Gebite in {dic_a[i]['name']} verkauft")
-                else:
-                    print("found nothing")
 
     async def on_message(self, message):
         if message.content.startswith("§display"):
